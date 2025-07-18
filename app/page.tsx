@@ -21,9 +21,9 @@ export default function DonationPage() {
 
   const translations = {
     fr: {
-      nav: { track: 'Track', steps: 'Steps', donate: 'Donate' },
+      nav: { track: 'Suivi', steps: 'Étapes', donate: 'Faire un don' }, // fixed French nav translations
       hero: {
-        title: 'Suivez chaque étape de votre sacrific,',
+        title: 'Suivez chaque étape de votre sacrifice,', // fixed typo "sacrific" -> "sacrifice"
         subtitle: 'du paiement jusqu\'à la distribution.',
         card1: 'Faire le Don',
         card2: 'L\'Odhiya', 
@@ -36,13 +36,13 @@ export default function DonationPage() {
         button: 'Faire le Don'
       },
       tracking: {
-        subtitle: 'Track',
+        subtitle: 'Suivi', // translated "Track"
         title: 'Suivez votre ID de donation ici',
         placeholder: 'Votre ID',
         button: 'Consulter le statut'
       }
     },
-    ar: {
+     ar: {
       nav: { track: 'تتبع', steps: 'الخطوات', donate: 'تبرع' },
       hero: {
         title: 'تتبع كل خطوة من تضحيتك،',
@@ -64,7 +64,7 @@ export default function DonationPage() {
         button: 'تحقق من الحالة'
       }
     },
-    en: {
+   en: {
       nav: { track: 'Track', steps: 'Steps', donate: 'Donate' },
       hero: {
         title: 'Follow every step of your sacrifice,',
@@ -100,9 +100,9 @@ export default function DonationPage() {
   return (
     <div className="min-h-screen bg-white pt-[60px]">
       {/* Header Navigation */}
-      <header className="border-b border-gray-200 px-2 sm:px-4 ">
+      <header className="border-b border-gray-200 px-2 sm:px-4">
         <nav
-          className="flex items-center justify-between w-full max-w-full md:max-w-[1570px] mx-auto px-2 sm:px-4 fixed top-2 left-0 right-0 z-50 bg-white overflow-x-auto"
+          className="fixed top-0 left-0 right-0 z-50 w-full max-w-full md:max-w-[1570px] mx-auto px-2 sm:px-4 flex items-center justify-between mt-2"
           style={{
             height: '50px',
             borderRadius: '20px',
@@ -135,7 +135,7 @@ export default function DonationPage() {
                 <ChevronDown className="w-4 h-4 text-gray-600" />
               </button>
               {showLangDropdown && (
-                <div className="absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                <div className="absolute top-full right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-[100]">
                   {Object.entries(languages).map(([code, lang]) => (
                     <button
                       key={code}
@@ -183,7 +183,7 @@ export default function DonationPage() {
                     <ChevronDown className="w-4 h-4 text-gray-600" />
                   </button>
                   {showLangDropdown && (
-                    <div className="absolute top-full left-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-50">
+                    <div className="absolute top-full left-0 mt-2 w-32 bg-white rounded-lg shadow-lg border border-gray-200 py-2 z-[100]">
                       {Object.entries(languages).map(([code, lang]) => (
                         <button
                           key={code}
@@ -266,7 +266,7 @@ export default function DonationPage() {
             <div className="relative flex justify-center items-center">
               <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-72 h-72 bg-green-600 opacity-40 blur-2xl rounded-full z-0 animate-pulse" />
               <div className="relative z-10">
-                <img src="/1.png" alt="Sheep for sacrifice" className="w-full max-w-md mx-auto" />
+                <img src="/1.png" alt="Sheep for sacrifice" className="w-full max-w-[3000px] mx-auto" />
               </div>
             </div>
             {/* Donation Info */}

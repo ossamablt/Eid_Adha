@@ -1,20 +1,24 @@
 import type { Metadata } from 'next'
-import './globals.css'
+import { Inter } from 'next/font/google'
+import "./globals.css" // You should have a globals.css file in your app directory
+
+const inter = Inter({ subsets: ['latin'] })
 
 export const metadata: Metadata = {
-  title: 'v0 App',
-  description: 'Created with v0',
-  generator: 'v0.dev',
+  title: 'Donation Page',
+  description: 'Follow every step of your sacrifice, from payment to distribution.',
 }
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode
-}>) {
+}) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body className={inter.className} suppressHydrationWarning={true}>
+        {children}
+      </body>
     </html>
   )
 }
