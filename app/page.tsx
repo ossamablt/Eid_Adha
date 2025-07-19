@@ -346,6 +346,7 @@ export default function DonationPage() {
           </div>
         </div>
       </section>
+      {/**/}
 
    
      {/* Footer */}
