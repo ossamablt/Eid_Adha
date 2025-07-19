@@ -128,7 +128,7 @@ export default function DonationPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-white pt-[60px]">
+    <div className="min-h-screen bg-white pt-6">
       {/* Header Navigation */}
       <header className="border-b border-gray-200 px-2 sm:px-4">
         <nav
@@ -238,7 +238,7 @@ export default function DonationPage() {
       </header>
 
       {/* Hero Section */}
-      <section className="min-h-[80vh] px-4 py-12 pb-32 md:px-6 md:py-20 flex flex-col justify-center bg-gradient-to-b from-white to-green-300">
+      <section className="min-h-[100vh] px-4 py-12 pb-32 md:px-6 md:py-20 flex flex-col justify-center bg-gradient-to-b from-white to-green-300">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-10 leading-tight">
             {t.hero.title}<br />
@@ -300,8 +300,8 @@ export default function DonationPage() {
               </div>
             </div>
             {/* Donation Info */}
-            <div className="space-y-6">
-              <h3 className="text-2xl font-bold text-gray-900">Votre don</h3>
+            <div className="space-y-6 flex flex-col items-center">
+              <h3 className="text-2xl font-bold text-gray-900 text-center">Votre don</h3>
               <p className="text-gray-600 text-lg leading-relaxed">
                 {t.donation.description}
               </p>
@@ -318,29 +318,29 @@ export default function DonationPage() {
 
       {/* Tracking Section */}
       <section className="min-h-[80vh] px-4 py-12 md:px-6 md:py-20 flex flex-col justify-center mt-11">
-        <div className="max-w-2xl mx-auto text-center relative">
-          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[400px] bg-[#2ECC71] opacity-50 blur-2xl rounded-4xl z-0" />
+        <div className="max-w-2xl mx-auto text-center relative px-4 sm:px-6">
+          <div className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[200px] sm:w-[500px] sm:h-[300px] md:w-[700px] md:h-[400px] bg-[#2ECC71] opacity-50 blur-2xl rounded-4xl z-0" />
           <div className="relative z-10">
-            <p className="text-gray-600 text-lg mb-4">{t.tracking.subtitle}</p>
-            <h2 className="text-xl sm:text-3xl md:text-4xl font-bold text-gray-900 mb-6 sm:mb-12">
+            <p className="text-sm sm:text-base md:text-lg text-gray-600 mb-2 sm:mb-4">{t.tracking.subtitle}</p>
+            <h2 className="text-lg sm:text-xl md:text-3xl lg:text-4xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8 lg:mb-12 px-2 leading-tight">
               {t.tracking.title.split('donation')[0]}
               <span className="text-[#2ECC71]">donation</span>
               {t.tracking.title.split('donation')[1]}
             </h2>
-            <div className="space-y-4">
+            <div className="space-y-3 sm:space-y-4 w-full">
               <Input
-                type="text"
-                placeholder={t.tracking.placeholder}
-                value={donationId}
-                onChange={(e) => setDonationId(e.target.value)}
-                className="w-full px-6 py-4 text-lg rounded-full border-2 border-gray-200 focus:border-[#2ECC71] focus:ring-0"
+          type="text"
+          placeholder={t.tracking.placeholder}
+          value={donationId}
+          onChange={(e) => setDonationId(e.target.value)}
+          className="w-full px-4 py-3 sm:px-6 sm:py-4 text-base sm:text-lg rounded-full border-2 border-gray-200 focus:border-[#2ECC71] focus:ring-0 min-h-[48px] sm:min-h-[56px]"
               />
               <Button
-                size="lg"
-                className="w-full bg-[#2ECC71] hover:bg-[#27ae60] text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg flex items-center justify-center gap-2 transition-all duration-300"
+          size="lg"
+          className="w-full bg-[#2ECC71] hover:bg-[#27ae60] text-white px-6 py-3 sm:px-8 sm:py-4 rounded-full text-base sm:text-lg font-semibold shadow-lg flex items-center justify-center gap-2 transition-all duration-300 min-h-[48px] sm:min-h-[56px]"
               >
-                {t.tracking.button}
-                <ArrowRight className="w-5 h-5" />
+          <span className="truncate">{t.tracking.button}</span>
+          <ArrowRight className="w-4 h-4 sm:w-5 sm:h-5 flex-shrink-0" />
               </Button>
             </div>
           </div>
