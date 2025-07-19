@@ -131,12 +131,12 @@ export default function DonationPage() {
 
   const t = translations[currentLang as "fr" | "ar" | "en"];
   const isRTL = currentLang === "ar";
+const details = [
+  ` ➤ Start the process of giving your contribution to support the Eid al-Adha sacrifice campaign.`,
+  ` ➤ Learn about the sacrificial animal (Odhiya) and its religious and social significance.`,
+  ` ➤ View specific details about the Odhiya: type, cost, and how it's managed by the foundation.`,
+];
 
-  const details = [
-    t.hero.card1 + " details...",
-    t.hero.card2 + " details...",
-    t.hero.card3 + " details...",
-  ];
 
   return (
     <div className="min-h-screen bg-white pt-6">
